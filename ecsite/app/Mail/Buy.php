@@ -16,9 +16,10 @@ class Buy extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($cartitems, $subtotal)
     {
-        //
+        $this->cartitems = $cartitems;
+        $this->subtotal = $subtotal;
     }
 
     /**
@@ -28,6 +29,10 @@ class Buy extends Mailable
      */
     public function build()
     {
-        return $this->view('buy.mail');
+        return $this->view('buy.mail')
+                    ->with([
+                        'cartitems' => $this->cartitems,
+                        'subtotal' => $this->subtotal,
+                        ]);
     }
 }
