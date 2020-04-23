@@ -41,10 +41,17 @@
           <div class="card-header">
             小計
           </div>
-          <div>
-            {{ $subtotal }}円
+          <div class="card-body">
+            <div>
+              {{ $subtotal }}円
+            </div>
+            <div>
+              <a href="/buy" class="btn btn-primary" role="button">
+                レジに進む
+              </a>
+            </div>
           </div>
-        </div>
+        </>
       </div>
     </div>
   </div>

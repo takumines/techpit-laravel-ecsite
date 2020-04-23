@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class CartItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $cartitems = CartItem::select('cart_items.*', 'items.name', 'items.amount')
