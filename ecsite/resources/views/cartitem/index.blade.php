@@ -12,11 +12,11 @@
         <div class="card">
           @foreach ($cartitems as $cartitem)
             <div class="card-header">
-              <a href="/item/{{ $cartitem->item_id }}">{{ $cartitem->name }}</a>
+              <a href="/item/{{ $cartitem->item_id }}">{{ $cartitem->item->name }}</a>
             </div>
             <div class="card-body">
               <div>
-                {{ $cartitem->amount }}円
+                {{ $cartitem->item->amount }}円
               </div>
               <div class="form-inline">
                 <form method="POST" action="/cartitem/{{ $cartitem->id }}">

@@ -104,11 +104,11 @@
         <div class="card">
           @foreach ($cartitems as $cartitem)
             <div class="card-header">
-              {{ $cartitem->name }}
+              {{ $cartitem->item->name }}
             </div>
             <div class="card-body">
               <div>
-                {{ $cartitem->amount }}円
+                {{ $cartitem->item->amount }}円
               </div>
               <div>
                 {{ $cartitem->quantity }}個
